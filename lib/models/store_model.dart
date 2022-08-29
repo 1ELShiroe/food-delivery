@@ -6,6 +6,7 @@ class StoreModel {
   final double shipping;
   final String time;
   final String review;
+  final bool liked;
 
   StoreModel({
     required this.title,
@@ -15,5 +16,6 @@ class StoreModel {
     required this.review,
     required this.type,
     required this.distance,
+    required this.liked,
   });
 }

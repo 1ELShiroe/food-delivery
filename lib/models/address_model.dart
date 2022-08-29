@@ -8,7 +8,4 @@ class AddressModel {
     required this.number,
     required this.reference,
   });
-  factory AddressModel.empty() {
-    return AddressModel(street: '', number: '', reference: '');
-  }
 }

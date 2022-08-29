@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:manhwa/models/ifood_famous_model.dart';
+import 'package:manhwa/models/latest_stores_model.dart';
 
-class IfoodFamousWidget extends StatelessWidget {
-  final IfoodFamousModel famousIfoodModel;
+class LatestStoresWidget extends StatelessWidget {
+  final LatestStoresModel latestStoresModel;
 
-  const IfoodFamousWidget({
+  const LatestStoresWidget({
     super.key,
-    required this.famousIfoodModel,
+    required this.latestStoresModel,
   });
 
   @override
@@ -20,7 +20,7 @@ class IfoodFamousWidget extends StatelessWidget {
             radius: 30, // Image radius
             //backgroundImage: NetworkImage(famousIfoodModel.url),
           ),
-          Text(famousIfoodModel.title, textAlign: TextAlign.center),
+          Text(latestStoresModel.title, textAlign: TextAlign.center),
         ],
       ),
     );

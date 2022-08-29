@@ -20,13 +20,16 @@ class StoreWidget extends StatelessWidget {
             children: [
               Icon(Icons.star, color: Colors.orange.shade400, size: 15),
               const SizedBox(width: 3),
-              Text(storeModel.review, style: TextStyle(color: Colors.orange.shade400)),
+              Text(storeModel.review,
+                  style: TextStyle(color: Colors.orange.shade400)),
               const SizedBox(width: 5),
-              const Text('‧', style: TextStyle(color: Colors.grey, fontSize: 30)),
+              const Text('‧',
+                  style: TextStyle(color: Colors.grey, fontSize: 30)),
               const SizedBox(width: 5),
               Text(storeModel.type),
               const SizedBox(width: 5),
-              const Text('‧', style: TextStyle(color: Colors.grey, fontSize: 30)),
+              const Text('‧',
+                  style: TextStyle(color: Colors.grey, fontSize: 30)),
               const SizedBox(width: 5),
               Text(storeModel.distance),
             ],
@@ -35,7 +38,8 @@ class StoreWidget extends StatelessWidget {
             children: [
               Text(storeModel.time),
               const SizedBox(width: 5),
-              const Text('‧', style: TextStyle(color: Colors.grey, fontSize: 30)),
+              const Text('‧',
+                  style: TextStyle(color: Colors.grey, fontSize: 30)),
               const SizedBox(width: 5),
               Text(shippingDescription, style: TextStyle(color: shippingColor)),
             ],
@@ -43,7 +47,9 @@ class StoreWidget extends StatelessWidget {
         ],
       ),
       trailing: IconButton(
-        icon: const Icon(Icons.favorite_border, color: Colors.grey),
+        icon: storeModel.liked
+            ? const Icon(Icons.favorite, color: Colors.red)
+            : const Icon(Icons.favorite_border, color: Colors.grey),
         iconSize: 25,
         color: Colors.white,
         onPressed: () {},
@@ -51,6 +57,9 @@ class StoreWidget extends StatelessWidget {
     );
   }
 
-  String get shippingDescription => (storeModel.shipping == 0) ? 'Grátis' : storeModel.shipping.toStringAsFixed(2);
-  Color get shippingColor => (storeModel.shipping == 0) ? Colors.green : Colors.orange;
+  String get shippingDescription => (storeModel.shipping == 0)
+      ? 'Grátis'
+      : storeModel.shipping.toStringAsFixed(2);
+  Color get shippingColor =>
+      (storeModel.shipping == 0) ? Colors.green : Colors.orange;
 }
