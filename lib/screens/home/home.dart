@@ -4,6 +4,7 @@ import 'package:manhwa/providers/banner_provider.dart';
 import 'package:manhwa/providers/categories_provider.dart';
 import 'package:manhwa/providers/ifood_famous_provider.dart';
 import 'package:manhwa/providers/latest_stores_provider.dart';
+import 'package:manhwa/providers/menu_provider.dart';
 import 'package:manhwa/providers/store_provider.dart';
 import 'package:manhwa/screens/home/components/banner_list.dart';
 import 'package:manhwa/screens/home/components/category_list.dart';
@@ -31,7 +32,8 @@ class _HomePageState extends State<HomePage> {
       context.read<IfoodFamousProvider>().loadIfoodFamous();
       context.read<AddressProvider>().loadAddress();
       context.read<StoreProvider>().loadStores();
-      context.read<LatestStoresProvider>().loadLatestStores();
+      context.read<LatestStoresProvider>().loadLatestStores();  
+      context.read<MenuProvider>().loadMenu();
     });
   }
 

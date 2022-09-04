@@ -17,7 +17,7 @@ class AddressList extends StatelessWidget {
         child: SizedBox(
           height: 60,
           child: ListView.builder(
-            itemCount: addressList.length, //value ? 1 :
+            itemCount: addressList.length,
             itemBuilder: (context, index) => Padding(
               padding: const EdgeInsets.all(8.0),
               child: AddressWidget(addressModel: addressList[index]),
